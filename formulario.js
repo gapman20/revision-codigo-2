@@ -19,7 +19,7 @@ formulario.onsubmit = function(e) {
   if (nombre.length === 0) {
     n.classList.add("error");
   }else if(typeof(nombre) !== "string" ) // Se agrego un if else para validar que solo sea tipo string
-    n.classList.add("eror"); 
+    n.classList.add("error"); 
   if (edad < 18 || edad > 120) {
     e.classList.add("error");
   }
