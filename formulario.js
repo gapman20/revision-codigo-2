@@ -1,5 +1,5 @@
 var formulario = document.querySelector("#form")
-
+/* Comentario */
 formulario.onsubmit = function(e) {
 
   e.prevent();
