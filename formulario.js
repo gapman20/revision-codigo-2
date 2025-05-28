@@ -1,8 +1,8 @@
-var formulario = document.querySelector("#form")
+var formulario = document.getElementById("formulario")  //Cambie el nombre del atributo a formulario donde coloque el id en el formulario
 /* Comentario */
 formulario.onsubmit = function(e) {
 
-  e.prevent();
+  e.preventDefault(); //Se agrego el Default
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -17,10 +17,11 @@ formulario.onsubmit = function(e) {
   console.log(nacionalidad)
 
   if (nombre.length === 0) {
-    n.classList.add("error")
-  }
+    n.classList.add("error");
+  }else if(typeof(nombre) !== "string" ) // Se agrego un if else para validar que solo sea tipo string
+    n.classList.add("eror"); 
   if (edad < 18 || edad > 120) {
-    e.classList.add("error")
+    e.classList.add("error");
   }
 
 if (nombre.length > 0 
